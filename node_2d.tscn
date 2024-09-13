@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddb4c3356j0gf"]
+
+[ext_resource type="PackedScene" uid="uid://ccmcaguog727y" path="res://boneco_teste_fodase.tscn" id="1_lmyv1"]
+[ext_resource type="PackedScene" uid="uid://dtlw7kno2uj7m" path="res://rigid_body_2d.tscn" id="2_o2pv4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8futq"]
+size = Vector2(811, 40)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Boneco" parent="." instance=ExtResource("1_lmyv1")]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Cenário" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenário"]
+position = Vector2(0, 116)
+collision_layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="Cenário/StaticBody2D"]
+offset_left = -404.0
+offset_top = -19.0
+offset_right = 406.0
+offset_bottom = 21.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenário/StaticBody2D"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_8futq")
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_o2pv4")]
