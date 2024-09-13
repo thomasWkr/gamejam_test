@@ -1,0 +1,11 @@
+Marker2D
+Area2D
+Node2D
+Node
+CollisionShape2D
+Sprite2D
+RigidBody2D
+Camera2D
+ColorRect
+StaticBody2D
+CharacterBody2D
