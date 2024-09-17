@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddb4c3356j0gf"]
+[gd_scene load_steps=5 format=3 uid="uid://ddb4c3356j0gf"]
 
 [ext_resource type="PackedScene" uid="uid://ccmcaguog727y" path="res://Scenes/Characters/player.tscn" id="1_3tfmd"]
 [ext_resource type="Script" path="res://main.gd" id="1_kkesr"]
+[ext_resource type="PackedScene" uid="uid://dtlw7kno2uj7m" path="res://Scenes/Objects/square.tscn" id="3_dagd7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8futq"]
 size = Vector2(811, 40)
@@ -17,8 +18,9 @@ unique_name_in_owner = true
 [node name="Cenário" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cenário"]
-position = Vector2(0, 116)
+position = Vector2(-103, 293)
 collision_layer = 2
+collision_mask = 135
 
 [node name="ColorRect" type="ColorRect" parent="Cenário/StaticBody2D"]
 offset_left = -404.0
@@ -27,5 +29,24 @@ offset_right = 406.0
 offset_bottom = 21.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenário/StaticBody2D"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_8futq")
+
+[node name="RigidBody2D" parent="." instance=ExtResource("3_dagd7")]
+position = Vector2(-258, 26)
+collision_mask = 135
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 116)
+collision_layer = 2
+collision_mask = 135
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -404.0
+offset_top = -19.0
+offset_right = 406.0
+offset_bottom = 21.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_8futq")
