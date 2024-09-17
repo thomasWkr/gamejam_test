@@ -1,3 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1726182357
-icon.svg::CompressedTexture2D::1818534797469026450::1726182349::1726182358::1::::<><>::
+::res://::1726546785
+icon.svg::CompressedTexture2D::1818534797469026450::1726540557::1726540633::1::::<><>::
+main.gd::GDScript::-1::1726546735::0::1::::<>Node2D<>::
+main.tscn::PackedScene::7373658839438697005::1726546735::0::1::::<><>::uid://ccmcaguog727y::::res://Scenes/Characters/player.tscn<>res://main.gd
+README.md::TextFile::-1::1726540557::0::1::::<><>::
+::res://Scenes/::1726541994
+::res://Scenes/Characters/::1726543554
+player.gd::GDScript::-1::1726541141::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4938113368378110308::1726543554::0::1::::<><>::res://Scenes/Characters/player.gd
+::res://Scenes/Objects/::1726546735
+square.gd::GDScript::-1::1726546726::0::1::::<>RigidBody2D<>::
+square.tscn::PackedScene::8516951700731328320::1726546735::0::1::::<><>::res://Scenes/Objects/square.gd<>uid://056ac2iatlxa::::res://icon.svg

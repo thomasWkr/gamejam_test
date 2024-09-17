@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddb4c3356j0gf"]
+
+[ext_resource type="PackedScene" uid="uid://ccmcaguog727y" path="res://Scenes/Characters/player.tscn" id="1_3tfmd"]
+[ext_resource type="Script" path="res://main.gd" id="1_kkesr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8futq"]
+size = Vector2(811, 40)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_kkesr")
+
+[node name="Boneco" parent="." instance=ExtResource("1_3tfmd")]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Cenário" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenário"]
+position = Vector2(0, 116)
+collision_layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="Cenário/StaticBody2D"]
+offset_left = -404.0
+offset_top = -19.0
+offset_right = 406.0
+offset_bottom = 21.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenário/StaticBody2D"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_8futq")

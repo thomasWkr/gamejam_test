@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccmcaguog727y"]
 
-[ext_resource type="Script" path="res://boneco_teste_fodase.gd" id="1_lqrkh"]
+[ext_resource type="Script" path="res://Scenes/Characters/player.gd" id="1_lqrkh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ls48s"]
 size = Vector2(40, 40)

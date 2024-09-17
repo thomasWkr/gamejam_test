@@ -1,4 +1,5 @@
-res://boneco_teste_fodase.gd
-res://node_2d.tscn
-res://rigid_body_2d.gd
-res://boneco_teste_fodase.tscn
+res://main.tscn
+res://main.gd
+res://Scenes/Objects/square.tscn
+res://Scenes/Objects/square.gd
+res://Scenes/Characters/player.gd
