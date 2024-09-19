@@ -3,50 +3,41 @@
 [ext_resource type="PackedScene" uid="uid://ccmcaguog727y" path="res://Scenes/Characters/player.tscn" id="1_3tfmd"]
 [ext_resource type="Script" path="res://main.gd" id="1_kkesr"]
 [ext_resource type="PackedScene" uid="uid://dtlw7kno2uj7m" path="res://Scenes/Objects/square.tscn" id="3_dagd7"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8futq"]
-size = Vector2(811, 40)
+[ext_resource type="PackedScene" uid="uid://vuhi4sd2wrn2" path="res://Scenes/Objects/platform.tscn" id="4_450wp"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_kkesr")
 
 [node name="Boneco" parent="." instance=ExtResource("1_3tfmd")]
 unique_name_in_owner = true
+position = Vector2(-10, -89)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Cenário" type="Node2D" parent="."]
+position = Vector2(0, 246)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cenário"]
-position = Vector2(-103, 293)
-collision_layer = 2
+[node name="Square" parent="." instance=ExtResource("3_dagd7")]
+position = Vector2(-501, 179)
 collision_mask = 135
+is_key = true
 
-[node name="ColorRect" type="ColorRect" parent="Cenário/StaticBody2D"]
-offset_left = -404.0
-offset_top = -19.0
-offset_right = 406.0
-offset_bottom = 21.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenário/StaticBody2D"]
-position = Vector2(0.5, 1)
-shape = SubResource("RectangleShape2D_8futq")
-
-[node name="RigidBody2D" parent="." instance=ExtResource("3_dagd7")]
-position = Vector2(-258, 26)
+[node name="Square2" parent="." instance=ExtResource("3_dagd7")]
+position = Vector2(95, 209)
+scale = Vector2(2, 2)
 collision_mask = 135
+size = 2
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(0, 116)
-collision_layer = 2
-collision_mask = 135
+[node name="Square3" parent="." instance=ExtResource("3_dagd7")]
+position = Vector2(495, -27)
+scale = Vector2(2, 2)
+is_door = true
+size = 2
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_left = -404.0
-offset_top = -19.0
-offset_right = 406.0
-offset_bottom = 21.0
+[node name="Platform" parent="." instance=ExtResource("4_450wp")]
+position = Vector2(370, 153)
+scale = Vector2(0.5, 6)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.5, 1)
-shape = SubResource("RectangleShape2D_8futq")
+[node name="Platform2" parent="." instance=ExtResource("4_450wp")]
+position = Vector2(-44, 299)
+scale = Vector2(2, 1)

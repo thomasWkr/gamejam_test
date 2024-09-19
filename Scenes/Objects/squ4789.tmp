@@ -12,11 +12,13 @@ size = Vector2(128, 127)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsk2j"]
 size = Vector2(145, 125)
 
-[node name="Square" type="RigidBody2D"]
+[node name="RigidBody2D" type="RigidBody2D"]
 position = Vector2(-172, 43)
 collision_layer = 4
 collision_mask = 7
+mass = 0.001
 physics_material_override = SubResource("PhysicsMaterial_iy0s3")
+linear_velocity = Vector2(0.78, 0.91)
 script = ExtResource("1_ue0kb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -39,13 +41,6 @@ position = Vector2(-0.5, -0.5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_lsk2j")
 debug_color = Color(0.7, 0, 0, 0.419608)
-
-[node name="Normal" type="RayCast2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-1, -35)
-target_position = Vector2(0, -20)
-collision_mask = 6
-hit_from_inside = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
